@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<title>Student Management</title>
 
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<style>
 		@font-face {
 			font-family: 'FontAwesome';
-			src: url('fonts/fontawesome-webfont.eot');
-			src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-				url('fonts/fontawesome-webfont.woff2') format('woff2'),
-				url('fonts/fontawesome-webfont.woff') format('woff'),
-				url('fonts/fontawesome-webfont.ttf') format('truetype'),
-				url('fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+			src: url('css/fontawesome-webfont.eot');
+			src: url('css/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+				url('css/fontawesome-webfont.woff2') format('woff2'),
+				url('css/fontawesome-webfont.woff') format('woff'),
+				url('css/fontawesome-webfont.ttf') format('truetype'),
+				url('css/fontawesome-webfont.svg#fontawesomeregular') format('svg');
 			font-weight: normal;
 			font-style: normal;
 		}
