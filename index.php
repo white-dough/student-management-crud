@@ -1,43 +1,41 @@
 <?php
-require_once("header.php");
-require_once("student_sql.php");
+	//to verify. are you logged in?
+	session_start();
+	require_once("header.php");
+	require_once("student_sql.php");
+	if (!isset($_SESSION["login"]))
+		header("location:/final-project-studentmanagement/login.php");
+	isset($_SESSION['loggedInAccount']) ? $loggedInUser = $_SESSION["loggedInAccount"] : false;
 ?>
+
 <?php
-if (isset($_GET["update"])) {
-	?>
-	<div class="alert alert-success">
-		<strong>Success!</strong> Data Updated Successfully <!--update alert-->
-	</div>
+	if (isset($_GET["update"])) {
+		?>
+		<div class="alert alert-success">
+			<strong>Success!</strong> Data Updated Successfully <!--update alert-->
+		</div>
 <?php } ?>
 
 <?php
-if (isset($_GET["delete"])) {
-	?>
-	<div class="alert alert-danger">
-		<strong>Success!</strong> Data Deleted Successfully <!--delete alert-->
-	</div>
-
+	if (isset($_GET["delete"])) {
+		?>
+		<div class="alert alert-danger">
+			<strong>Success!</strong> Data Deleted Successfully <!--delete alert-->
+		</div>
 <?php } ?>
-
 
 <!-- Insert Data -->
-
 <?php
-
 $user = new Student;
-
 if (isset($_POST["sub"])) {
-
 	$lname = $_POST["lname"];
 	$fname = $_POST["fname"];
 	$course = $_POST["course"];
 	$level = $_POST["level"];
-
 	$user->setLName($lname);
 	$user->setFName($fname);
 	$user->setcourse($course);
 	$user->setlevel($level);
-
 	$user->insertData();
 
 	?>
@@ -52,7 +50,7 @@ if (isset($_POST["sub"])) {
 <!-- Read Data -->
 
 <div class="panel-heading">
-	<h3>Students List <a class="pull-right btn btn-success" href="addstudent.php">Add</a></h3>
+	<h3>Student List <a class="pull-right btn btn-success" href="addstudent.php">Add</a></h3>
 </div>
 
 <div class="panel-body">
@@ -61,7 +59,7 @@ if (isset($_POST["sub"])) {
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th class="bg-primary" scope="col">NO</th>
+				<th class="bg-primary" scope="col">NO.</th>
 				<th class="bg-primary" scope="col">Last Name</th>
 				<th class="bg-primary" scope="col">First Name</th>
 				<th class="bg-primary" scope="col">Course</th>
@@ -84,10 +82,10 @@ if (isset($_POST["sub"])) {
 						<?php echo $i ?>
 					</td>
 					<td style=cursor: pointer;>
-						<?php echo $value["lName"] ?>
+						<?php echo $value["lname"] ?>
 					</td>
 					<td style=cursor: pointer;>
-						<?php echo $value["fName"] ?>
+						<?php echo $value["fname"] ?>
 					</td>
 					<td>
 						<?php echo $value["course"] ?>

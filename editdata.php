@@ -30,20 +30,20 @@ if (isset($_GET["action"]) && $_GET["action"] == "edit"){
   </div>
   
   <div class="form-group">
-    <label for="dep">First Name</label>
-    <input type="text" name="name"  value="<?php echo $result ['fname'];?>"  required="1" class="form-control" >
-    <label for="dep">Last Name</label>
-    <input type="text" name="name"  value="<?php echo $result ['lname'];?>"  required="1" class="form-control" >
+    <label for="fname">First Name</label>
+    <input type="text" name="fname"  value="<?php echo $result ['fname'];?>"  required="1" class="form-control" >
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname"  value="<?php echo $result ['lname'];?>"  required="1" class="form-control" >
   </div>
   
   <div class="form-group">
-    <label for="dep">Course</label>
-    <input type="text" name="dep"  value="<?php echo $result ['course'];?>" required="1" class="form-control" >
+    <label for="course">Course</label>
+    <input type="text" name="course"  value="<?php echo $result ['course'];?>" required="1" class="form-control" >
   </div>
   
    <div class="form-group">
-    <label for="sell">Level</label>
-    <input type="text" name="age"  value="<?php echo $result ["level"];?>" required="1" class="form-control" >
+    <label for="level">Level</label>
+    <input type="text" name="level"  value="<?php echo $result ["level"];?>" required="1" class="form-control" >
   </div>
   
   <button type="submit" name="edit" class="btn btn-primary">Update</button>

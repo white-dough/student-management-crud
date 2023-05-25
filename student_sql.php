@@ -53,7 +53,7 @@ function readById($id){
 		$stmt = Db::prepareOwn($sql);
 		$stmt->bindParam(":id",$id);
 		$stmt->execute();
-		return $stmt->fetch();	
+		return $stmt->fetch();
 	}
 	
 	
