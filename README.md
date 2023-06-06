@@ -10,4 +10,4 @@ Create a new database in phpmyadmin called studentmanagement. Import the [studen
 (as provided with database, you can also register)<br>
 username: admin<br>
 password: admin
-![Alt Text](fonts/index-ss.png)
+![Alt Text](css/index-ss.png)
